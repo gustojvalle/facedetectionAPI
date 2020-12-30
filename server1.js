@@ -11,7 +11,7 @@ const db = knex({
     client: 'pg', 
     connection: {
         connectionString : process.env.DATABASE_URL || postgresql-tapered-25698, 
-        ssl: true,
+        ssl: false,
     }
 });
 
