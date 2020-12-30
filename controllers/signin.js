@@ -10,6 +10,7 @@
     .then(data => {
             if(data[0]){
             bcrypt.compare(password, data[0].hash , function(err, res){
+                console.log(res);
                 if(res){
                     db.select('*').from('users').where("email", "=", email)
                     .then(user => {
