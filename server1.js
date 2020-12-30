@@ -16,8 +16,6 @@ const db = knex({
 });
 
 
-console.log(db.select("*").from("login"))
-
 const app = new express();
 const port = 8560; 
 
