@@ -8,8 +8,9 @@
        }
     db('login').select('email', 'hasg').from("login").where("email", "=", email)
     .then(data => {
+            console.log(data[0])
             if(data[0]){
-            bcrypt.compare(password, data[0].hash , function(err, res){
+            bcrypt.compare(password, data[0].hasg , function(err, res){
                 console.log(res);
                 if(res){
                     db.select('*').from('users').where("email", "=", email)
