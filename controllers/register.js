@@ -30,7 +30,6 @@ const handleRegister = (req, res, db, bcrypt)=>{
             .catch(trx.rollback)
           })
             .catch(err => {
-                console.log("hi");
                 res.status(400).json('Unable to join')});
     }); 
 
