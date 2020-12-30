@@ -4,7 +4,7 @@
 
     
     if (!email || !password){
-        return res.status(400).json("Incorrect form submission");
+        return resp.status(400).json("Incorrect form submission");
        }
     db('login').select('email', 'hash').from("login").where("email", "=", email)
     .then(data => {
